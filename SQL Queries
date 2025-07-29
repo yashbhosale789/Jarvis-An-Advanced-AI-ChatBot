@@ -1,0 +1,72 @@
+-- Enable the vector extension if not already enabled
+CREATE EXTENSION IF NOT EXISTS vector;
+
+-- Create or recreate marvel_characters_phase_three with proper structure
+DROP TABLE IF EXISTS marvel_characters_phase_three;
+CREATE TABLE marvel_characters_phase_three (
+    character_id INTEGER PRIMARY KEY,
+    character_name VARCHAR,
+    real_name VARCHAR,
+    actor VARCHAR,
+    debut_movie VARCHAR,
+    debut_year INTEGER,
+    team_affiliation VARCHAR,
+    status VARCHAR,
+    powers VARCHAR,
+    embedding VECTOR(1536)
+);
+
+-- Copy data from the original table (removing duplicates)
+INSERT INTO marvel_characters_phase_three (
+    character_id, character_name, real_name, actor, debut_movie, 
+    debut_year, team_affiliation, status, powers
+)
+SELECT DISTINCT ON (character_id) 
+    character_id, character_name, real_name, actor, debut_movie, 
+    debut_year, team_affiliation, status, powers
+FROM marvel_characters;
+
+-- Create or recreate marvel_characters_phase_three_csv
+DROP TABLE IF EXISTS marvel_characters_phase_three_csv;
+CREATE TABLE marvel_characters_phase_three_csv (
+    file_name VARCHAR PRIMARY KEY,
+    content TEXT,
+    embedding VECTOR(1536)
+);
+
+-- Create or recreate marvel_characters_phase_three_pdf
+DROP TABLE IF EXISTS marvel_characters_phase_three_pdf;
+CREATE TABLE marvel_characters_phase_three_pdf (
+    file_name VARCHAR PRIMARY KEY,
+    content TEXT,
+    embedding VECTOR(1536)
+);
+
+-- Create history table
+CREATE TABLE IF NOT EXISTS marvel_characters_phase_three_history (
+    id SERIAL PRIMARY KEY,
+    role VARCHAR(50) NOT NULL,
+    content TEXT NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Verify the setup
+SELECT 'Main Table Count' as info, COUNT(*) as count FROM marvel_characters_phase_three
+UNION ALL
+SELECT 'CSV Table Count', COUNT(*) FROM marvel_characters_phase_three_csv
+UNION ALL
+SELECT 'PDF Table Count', COUNT(*) FROM marvel_characters_phase_three_pdf
+UNION ALL
+SELECT 'History Table Count', COUNT(*) FROM marvel_characters_phase_three_history;
+
+Select *from marvel_characters_phase_three_pdf;
+
+Delete from marvel_characters_phase_three_documents;
+
+CREATE TABLE marvel_characters_phase_three_documents (
+    LIKE marvel_characters_phase_three_pdf INCLUDING ALL
+);
+
+Select *from marvel_characters_phase_three_documents;
+
+Delete from marvel_characters_phase_three_documents;

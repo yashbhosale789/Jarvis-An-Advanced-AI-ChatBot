@@ -1,0 +1,10 @@
+streamlit 
+pdfplumber 
+pandas 
+python-dotenv 
+psycopg2-binary 
+openai 
+numpy
+speechrecognition
+pyttsx3
+pyaudio

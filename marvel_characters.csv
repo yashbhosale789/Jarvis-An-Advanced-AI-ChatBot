@@ -1,0 +1,21 @@
+character_id,character_name,real_name,actor,debut_movie,debut_year,team_affiliation,status,powers
+1,Iron Man,Tony Stark,Robert Downey Jr.,Iron Man,2008,Avengers,Deceased,"Powered armor, genius inventor"
+2,Captain America,Steve Rogers,Chris Evans,Captain America: The First Avenger,2011,Avengers,Retired,Peak-human strength & leadership
+3,Thor,Thor Odinson,Chris Hemsworth,Thor,2011,Avengers,Alive,"Asgardian god, Mjölnir/Stormbreaker"
+4,Black Widow,Natasha Romanoff,Scarlett Johansson,Iron Man 2,2010,Avengers,Deceased,"Master spy, martial arts"
+5,Hulk,Bruce Banner,Mark Ruffalo,The Incredible Hulk,2008,Avengers,Alive,Gamma-powered strength
+6,Hawkeye,Clint Barton,Jeremy Renner,Thor (cameo) / The Avengers,2011,Avengers,Alive,Master archer
+7,Spider-Man,Peter Parker,Tom Holland,Captain America: Civil War,2016,Avengers,Alive,"Spider-sense, wall-crawling"
+8,Black Panther,T’Challa,Chadwick Boseman,Captain America: Civil War,2016,Wakanda,Deceased,"Vibranium suit, enhanced agility"
+9,Doctor Strange,Stephen Strange,Benedict Cumberbatch,Doctor Strange,2016,Avengers,Alive,Master of the mystic arts
+10,Captain Marvel,Carol Danvers,Brie Larson,Captain Marvel,2019,Avengers,Alive,Cosmic energy manipulation
+11,Ant-Man,Scott Lang,Paul Rudd,Ant-Man,2015,Avengers,Alive,Size manipulation via Pym Particles
+12,Wasp,Hope van Dyne,Evangeline Lilly,Ant-Man,2015,Avengers,Alive,Flight & size manipulation
+13,Scarlet Witch,Wanda Maximoff,Elizabeth Olsen,Avengers: Age of Ultron,2015,None,Unknown,"Chaos magic, reality warping"
+14,Vision,Vision,Paul Bettany,Avengers: Age of Ultron,2015,Avengers,Unknown,Mind Stone–powered android
+15,Loki,Loki Laufeyson,Tom Hiddleston,Thor,2011,Independent,Alive,"Illusion, shapeshifting, mischief"
+16,Thanos,Thanos,Josh Brolin,The Avengers (post-credit),2012,None,Deceased,"Titan physiology, Infinity Gauntlet"
+17,Shang-Chi,Xu Shang-Chi,Simu Liu,Shang-Chi and the Legend of the Ten Rings,2021,Avengers (prospect),Alive,"Martial arts, Ten Rings artefact"
+18,Ms. Marvel,Kamala Khan,Iman Vellani,The Marvels,2023,Avengers (prospect),Alive,Embigen light-constructs
+19,Deadpool,Wade Wilson,Ryan Reynolds,Deadpool & Wolverine,2024,X-Force,Alive,"Healing factor, fourth-wall awareness"
+20,Wolverine,Logan Howlett,Hugh Jackman,Deadpool & Wolverine,2024,X-Men,Alive,"Adamantium claws, regeneration"
