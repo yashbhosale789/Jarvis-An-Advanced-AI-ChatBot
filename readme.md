@@ -70,6 +70,8 @@ This project is a Streamlit-based chatbot that can answer questions about Marvel
     streamlit run app.py
     ```
 
+    For more information, reach out to me at yashbhosale789@gmail.com
+
 ## Usage
 
 - **Chat**: Type your questions in the chat input box or use the voice input button.
